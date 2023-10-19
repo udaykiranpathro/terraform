@@ -1,0 +1,13 @@
+aws configure
+  252  terraform validate
+  253  terraform apply
+  254  terraform plan -generate-config-out=generated.tf - # it will import the resource form aws to local into generated.tf file
+  256  vi generated.tf
+  257  terraform refresh
+  259  terraform plan
+  261  terraform import aws_instance.example i-0ea97386b004e4bdf # it will import the aws resource into terraform state file
+  263  vi terraform.tfstate
+  264  terraform plan
+  271  git add .
+  272  git commit -m "import form aws"
+  273  git push
